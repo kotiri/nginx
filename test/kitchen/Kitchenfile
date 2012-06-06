@@ -1,0 +1,4 @@
+cookbook "nginx" do
+  configuration "default"
+  configuration "source"
+end
