@@ -4,6 +4,12 @@ directory node[:nginx][:dir] do
   mode "0755"
 end
 
+user node[:nginx][:user] do
+  system true
+  shell "/bin/false"
+  home "/var/www"
+end
+
 directory node[:nginx][:log_dir] do
   mode 0755
   owner node[:nginx][:user]
